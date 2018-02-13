@@ -45,8 +45,21 @@ struct Constants {
         static let apiKey = "api-key=32534511931e4dc1b5627b6918ca0d6b"
         static let base = "https://api.nytimes.com"
         static let mostShared  = "/svc/mostpopular/v2/mostshared/all-sections/1.json"
+         static let mostSharedOneDay  = "/svc/mostpopular/v2/mostshared/all-sections/1.json"
+         static let mostSharedSevenDays  = "/svc/mostpopular/v2/mostshared/all-sections/7.json"
+         static let mostSharedThirtyDays  = "/svc/mostpopular/v2/mostshared/all-sections/30.json"
+        
+        
         static let mostEmailed = "svc/mostpopular/v2/mostemailed/all-sections/1.json"
+         static let mostEmailedOneDay = "svc/mostpopular/v2/mostemailed/all-sections/1.json"
+        static let mostEmailedSevenDays = "svc/mostpopular/v2/mostemailed/all-sections/7.json"
+        static let mostEmailedThirtyDays = "svc/mostpopular/v2/mostemailed/all-sections/30.json"
+        
         static let mostViewed =  "/svc/mostpopular/v2/mostviewed/all-sections/1.json"
+        
+        static let mostViewedOneDay =  "/svc/mostpopular/v2/mostviewed/all-sections/1.json"
+        static let mostViewedSevenDays =  "/svc/mostpopular/v2/mostviewed/all-sections/7.json"
+        static let mostViewedThirtyDays =  "/svc/mostpopular/v2/mostviewed/all-sections/30.json"
     }
     
     struct TimeSchedule {
