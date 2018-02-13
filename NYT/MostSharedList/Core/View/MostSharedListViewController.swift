@@ -14,7 +14,7 @@ final class MostSharedListViewController: UIViewController {
    
     @IBOutlet weak var tableView: UITableView!
     private let client = NewsApiClient()
-    @IBOutlet weak var daysSegmentedController: UISegmentedControl!
+    private var selectedIndexforSocialMedia: Int!
     @IBOutlet weak var sourceSegmentedController: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -35,6 +35,10 @@ final class MostSharedListViewController: UIViewController {
     
     @IBAction func daysSegmentedController(_ sender: UISegmentedControl) {
         
+        //It means: we hace FB selected
+        if selectedIndexforSocialMedia != 0 {
+            
+        }
         
         guard let selectedIndex = NewsFeed(rawValue: sender.selectedSegmentIndex) else { return  }
         
@@ -42,7 +46,7 @@ final class MostSharedListViewController: UIViewController {
     }
     
     @IBAction func socialMediaSegmentedController(_ sender: UISegmentedControl) {
-        
+        selectedIndexforSocialMedia = sender.selectedSegmentIndex
     }
     
     

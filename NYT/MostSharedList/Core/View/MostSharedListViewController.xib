@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MostSharedListViewController" customModule="NYT" customModuleProvider="target">
             <connections>
+                <outlet property="sourceSegmentedController" destination="U2K-vo-yVE" id="duI-yS-mcY"/>
                 <outlet property="tableView" destination="ja5-kv-6ls" id="vDy-W4-iKm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

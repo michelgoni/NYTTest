@@ -11,11 +11,9 @@ import Foundation
 //Time to refactor this enum extending from Int in order to get selected path
 enum NewsFeed: Int {
     
-    case mostSharedOneDay, mostSharedSevenDays, mostSharedThirtyDays, mostEmailedOneDay, mostEmailedSevenDays, mostEmailedThirtyDays, mostViewedOneDay, mostViewedSevenDays, mostViewedThirtyDays
+    case mostSharedOneDay, mostSharedSevenDays, mostSharedThirtyDays, mostSharedFaceBookOneDay, mostSharedFaceBookSevenDays, mostSharedFaceBookThirtyDays, mostEmailedOneDay, mostEmailedSevenDays, mostEmailedThirtyDays, mostViewedOneDay, mostViewedSevenDays, mostViewedThirtyDays
     
 }
-
-
 
 extension NewsFeed: Endpoint {
   
@@ -33,6 +31,12 @@ extension NewsFeed: Endpoint {
             return Constants.EnPoint.mostSharedSevenDays
         case .mostSharedThirtyDays:
             return Constants.EnPoint.mostSharedThirtyDays
+        case .mostSharedFaceBookOneDay:
+            return Constants.EnPoint.mostSharedFacebookOneDay
+        case .mostSharedFaceBookSevenDays:
+            return Constants.EnPoint.mostSharedFacebookSevenDays
+        case .mostSharedFaceBookThirtyDays:
+            return Constants.EnPoint.mostSharedFacebookThirtyDays
         case .mostEmailedOneDay:
             return Constants.EnPoint.mostEmailedOneDay
         case .mostEmailedSevenDays:
@@ -44,6 +48,8 @@ extension NewsFeed: Endpoint {
         case .mostViewedSevenDays:
             return Constants.EnPoint.mostViewedSevenDays
         case .mostViewedThirtyDays:
+            return Constants.EnPoint.mostViewedThirtyDays
+        case .mostSharedFaceBookOneDay:
             return Constants.EnPoint.mostViewedThirtyDays
         }
     }
