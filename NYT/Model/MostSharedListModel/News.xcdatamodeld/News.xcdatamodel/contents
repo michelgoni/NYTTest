@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1212" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Media" representedClassName="Media" syncable="YES">
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="copyright" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mediametada" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mediametadata" syncable="YES"/>
+    </entity>
+    <entity name="Mediametadata" representedClassName="Mediametadata" syncable="YES">
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="News" representedClassName="NewsManaged" syncable="YES">
+        <attribute name="abstract" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="section" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="media" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Media" syncable="YES"/>
+    </entity>
+    <entity name="Results" representedClassName="Results" syncable="YES">
+        <relationship name="results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="News" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Media" positionX="-63" positionY="27" width="128" height="90"/>
+        <element name="Mediametadata" positionX="-54" positionY="36" width="128" height="60"/>
+        <element name="News" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Results" positionX="-63" positionY="54" width="128" height="60"/>
+    </elements>
+</model>
