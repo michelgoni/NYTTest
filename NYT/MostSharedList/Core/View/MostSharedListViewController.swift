@@ -38,6 +38,20 @@ final class MostSharedListViewController: UIViewController {
         //It means: we hace FB selected
         if selectedIndexforSocialMedia != 0 {
             
+            //FIXME: This logic should be refactored and improved
+            switch sender.titleForSegment(at: sender.selectedSegmentIndex) {
+                
+            case "1 day"?:
+                presenter?.loadNewsWithSelectedRange(NewsFeed(rawValue: 3)!)
+            case "7 days"?:
+                presenter?.loadNewsWithSelectedRange(NewsFeed(rawValue: 4)!)
+            case "30 days"?:
+                presenter?.loadNewsWithSelectedRange(NewsFeed(rawValue: 5)!)
+            case .none:
+                print("none")
+            case .some(_):
+                print("some")
+            }
         }
         
         guard let selectedIndex = NewsFeed(rawValue: sender.selectedSegmentIndex) else { return  }
