@@ -15,9 +15,10 @@ final class MostSharedListDefaultInteractorManager {
 }
 
 extension MostSharedListDefaultInteractorManager: MostSharedListInteractorManager {
-    func getNews(completionHandler: @escaping resultsCompletion) {
+    
+    func getNews(withNewsFeed newsFeed: NewsFeed, completionHandler: @escaping MostSharedListDefaultInteractorManager.resultsCompletion) {
         
-        dataProvider.getNews(withFeed: .mostShared, localHandler: { localNews, errorDescription in
+        dataProvider.getNews(withFeed: newsFeed, localHandler: { localNews, errorDescription in
             guard let localNews = localNews else {
                 completionHandler(nil, errorDescription)
                 return
@@ -32,4 +33,6 @@ extension MostSharedListDefaultInteractorManager: MostSharedListInteractorManage
             completionHandler(remoteNews, nil)
         }
     }
+    
+   
 }

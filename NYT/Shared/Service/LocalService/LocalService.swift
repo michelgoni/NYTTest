@@ -29,14 +29,14 @@ final class LocalCoreDataService {
                
                 remoteHandler(newsResults,nil)
                 
-                 //TODO:--This logic should be improved, since we´re only saving mostShared news in order to push correctly to a detailed new from the mostSharedVC.
-                switch feed {
-                case .mostShared:
-                    self.stack.persistentContainer.viewContext.deletePreviousNews()
-                    self.stack.persistentContainer.viewContext.insertNews()
-                case .mostEmailed, .mostViewed:
-                    break
-                }
+//                 //TODO:--This logic should be improved, since we´re only saving mostShared news in order to push correctly to a detailed new from the mostSharedVC.
+//                switch feed {
+//                case .mostShared:
+//                    self.stack.persistentContainer.viewContext.deletePreviousNews()
+//                    self.stack.persistentContainer.viewContext.insertNews()
+//                case .mostEmailed, .mostViewed:
+//                    break
+//                }
                 
                
             case .failure(let error):

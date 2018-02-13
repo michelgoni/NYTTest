@@ -11,5 +11,5 @@ import Foundation
 
 protocol MostSharedListInteractorManager {
 
-    func getNews(completionHandler: @escaping MostSharedListDefaultInteractorManager.resultsCompletion)
+    func getNews(withNewsFeed newsFeed: NewsFeed, completionHandler: @escaping MostSharedListDefaultInteractorManager.resultsCompletion)
 }

@@ -11,8 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MostSharedListViewController" customModule="NYT" customModuleProvider="target">
             <connections>
-                <outlet property="daysSegmentedController" destination="zoe-Ry-Zoi" id="CEw-BR-Wn9"/>
-                <outlet property="sourceSegmentedController" destination="U2K-vo-yVE" id="C8e-jh-XUZ"/>
                 <outlet property="tableView" destination="ja5-kv-6ls" id="vDy-W4-iKm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,6 +31,9 @@
                         <segment title="7 days"/>
                         <segment title="30 days"/>
                     </segments>
+                    <connections>
+                        <action selector="daysSegmentedController:" destination="-1" eventType="valueChanged" id="miE-pX-qgt"/>
+                    </connections>
                 </segmentedControl>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U2K-vo-yVE">
                     <rect key="frame" x="91" y="92" width="201" height="29"/>
@@ -40,6 +41,9 @@
                         <segment title="Twitter"/>
                         <segment title="Facebook"/>
                     </segments>
+                    <connections>
+                        <action selector="socialMediaSegmentedController:" destination="-1" eventType="valueChanged" id="Gvb-1t-Veh"/>
+                    </connections>
                 </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

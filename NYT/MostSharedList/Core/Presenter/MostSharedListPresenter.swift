@@ -11,6 +11,7 @@ import Foundation
 protocol MostSharedListPresenter {
 
     func loadNews()
+    func loadNewsWithSelectedRange(_ range: NewsFeed)
     func presentNewsDetail(withNewId newId: Int)
     
 }

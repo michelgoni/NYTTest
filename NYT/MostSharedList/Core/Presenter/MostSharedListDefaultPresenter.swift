@@ -47,9 +47,21 @@ extension MostSharedListDefaultPresenter: MostSharedListPresenter{
         router.navigateToNewDetail(withNewid: newId)
     }
 
+    //TODO: This should be improved
+    func loadNewsWithSelectedRange(_ range: NewsFeed) {
+        
+        interactorManager.getNews(withNewsFeed: range) { [unowned self] results, error in
+            
+            if error == nil {
+                self.buildAndDisplayModel(newsViewModel: Array(results!))
+            }else{
+                self.view?.displayError(error)
+            }
+        }
+    }
     func loadNews() {
     
-        interactorManager.getNews { [unowned self] results, error in
+        interactorManager.getNews(withNewsFeed: .mostSharedOneDay) { [unowned self] results, error in
             
             if error == nil {
                 self.buildAndDisplayModel(newsViewModel: Array(results!))

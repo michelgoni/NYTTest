@@ -33,6 +33,19 @@ final class MostSharedListViewController: UIViewController {
          self.navigationItem.title = Constants.NavigationController.mostSharedTitle
     }
     
+    @IBAction func daysSegmentedController(_ sender: UISegmentedControl) {
+        
+        
+        guard let selectedIndex = NewsFeed(rawValue: sender.selectedSegmentIndex) else { return  }
+        
+        presenter?.loadNewsWithSelectedRange(selectedIndex)
+    }
+    
+    @IBAction func socialMediaSegmentedController(_ sender: UISegmentedControl) {
+        
+    }
+    
+    
     private func setUptableView() {
         
         tableView.register(MostSharedListTableViewCell.self)

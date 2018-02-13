@@ -17,8 +17,8 @@ extension MostViewedListDefaultInteractorManager: MostViewedListInteractorManage
    
     func getNews(completionHandler: @escaping MostSharedListDefaultInteractorManager.resultsCompletion) {
         
-        
-        dataProvider.getNews(withFeed: .mostViewed, localHandler: { (localNews, errorDescription) in
+        //Mock in order to compile
+        dataProvider.getNews(withFeed: .mostViewedSevenDays, localHandler: { (localNews, errorDescription) in
             guard let localNews = localNews else {
                 completionHandler(nil, errorDescription)
                 return

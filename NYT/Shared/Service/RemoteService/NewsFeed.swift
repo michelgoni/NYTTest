@@ -11,8 +11,7 @@ import Foundation
 //Time to refactor this enum extending from Int in order to get selected path
 enum NewsFeed: Int {
     
-    case mostSharedOneDay = 0, mostSharedSevenDays, mostSharedThirtyDays, mostEmailedOneDay, mostEmailedSevenDays, mostEmailedThirtyDays, mostViewedOneDay, mostViewedSevenDays, mostViewedThirtyDays
-   // case mostShared,mostEmailed,mostViewed
+    case mostSharedOneDay, mostSharedSevenDays, mostSharedThirtyDays, mostEmailedOneDay, mostEmailedSevenDays, mostEmailedThirtyDays, mostViewedOneDay, mostViewedSevenDays, mostViewedThirtyDays
     
 }
 
@@ -29,31 +28,24 @@ extension NewsFeed: Endpoint {
 
         switch self {
         case .mostSharedOneDay:
-            return Constants.EnPoint.mostShared
+            return Constants.EnPoint.mostSharedOneDay
         case .mostSharedSevenDays:
-            return Constants.EnPoint.mostShared
+            return Constants.EnPoint.mostSharedSevenDays
         case .mostSharedThirtyDays:
-            return Constants.EnPoint.mostShared
+            return Constants.EnPoint.mostSharedThirtyDays
         case .mostEmailedOneDay:
-            return Constants.EnPoint.mostShared
+            return Constants.EnPoint.mostEmailedOneDay
         case .mostEmailedSevenDays:
-            return Constants.EnPoint.mostShared
+            return Constants.EnPoint.mostEmailedSevenDays
         case .mostEmailedThirtyDays:
-            return Constants.EnPoint.mostShared
+            return Constants.EnPoint.mostEmailedThirtyDays
         case .mostViewedOneDay:
-            return Constants.EnPoint.mostShared
+            return Constants.EnPoint.mostViewedOneDay
         case .mostViewedSevenDays:
-            return Constants.EnPoint.mostShared
+            return Constants.EnPoint.mostViewedSevenDays
         case .mostViewedThirtyDays:
-            return Constants.EnPoint.mostShared
-//        case .mostShared:
-//
-//            return Constants.EnPoint.mostShared
-//        case .mostEmailed:
-//            return Constants.EnPoint.mostEmailed
-//        case .mostViewed:
-//            return Constants.EnPoint.mostViewed
-//        }
+            return Constants.EnPoint.mostViewedThirtyDays
+        }
     }
 }
 
