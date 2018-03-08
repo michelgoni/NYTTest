@@ -31,10 +31,10 @@ final class LocalCoreDataService {
                 
                  //TODO:--This logic should be improved, since we´re only saving mostShared news in order to push correctly to a detailed new from the mostSharedVC.
                 switch feed {
-                case .mostSharedOneDay, .mostSharedSevenDays, .mostSharedThirtyDays, .mostSharedFaceBookOneDay, .mostSharedFaceBookSevenDays, .mostSharedFaceBookThirtyDays:
+                case .mostSharedOneDay:
                     self.stack.persistentContainer.viewContext.deletePreviousNews()
                     self.stack.persistentContainer.viewContext.insertNews()
-                case .mostEmailedThirtyDays, .mostEmailedSevenDays, .mostEmailedOneDay, .mostViewedOneDay, .mostViewedSevenDays, .mostViewedThirtyDays:
+                case  .mostViewedOneDay:
                     break
                 }
                 
