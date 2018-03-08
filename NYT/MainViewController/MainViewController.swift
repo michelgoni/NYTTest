@@ -28,18 +28,13 @@ class MainViewController: UITabBarController {
         let mostViewedNavigationController = UINavigationController(rootViewController: mostViewedViewController!)
         mostViewedNavigationController.configureNavigationController()
         
-        //MARK:--Most emailed. Only for stub purpose
-        let mostEmailedViewController = Container.shared.mostViewedListBuilder().buildMostViewedListModule()
-        mostEmailedViewController?.tabBarItem = UITabBarItem(title: Constants.TabBar.mostEmailed,image: UIImage(named: "towatch-icon"),tag: 3)
-        let mostEmailedNavigationController = UINavigationController(rootViewController: mostEmailedViewController!)
-        mostEmailedNavigationController.configureNavigationController()
-        
+       
         let tabBarViewController = MainViewController()
         
         // MARK: Appearance config
         tabBarViewController.configureTabBarAppearance()
         tabBarViewController.centerVerticallyTabBarItems()
-        tabBarViewController.viewControllers = [mostSharedNavigationController, mostViewedNavigationController, mostEmailedNavigationController]
+        tabBarViewController.viewControllers = [mostSharedNavigationController, mostViewedNavigationController]
         
         return tabBarViewController
     }

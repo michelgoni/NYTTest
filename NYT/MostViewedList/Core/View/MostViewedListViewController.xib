@@ -21,27 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Kn-vk-bAy">
-                    <rect key="frame" x="0.0" y="92" width="375" height="575"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xbS-uc-LdA">
-                    <rect key="frame" x="-3" y="64" width="375" height="29"/>
-                    <segments>
-                        <segment title="1 day"/>
-                        <segment title="7 days"/>
-                        <segment title="30 days"/>
-                    </segments>
-                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="9Kn-vk-bAy" secondAttribute="trailing" id="FIs-ZD-WhR"/>
-                <constraint firstItem="xbS-uc-LdA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="NhN-bF-Jem"/>
-                <constraint firstAttribute="trailing" secondItem="xbS-uc-LdA" secondAttribute="trailing" constant="3" id="O9j-3I-SLQ"/>
-                <constraint firstAttribute="bottom" secondItem="9Kn-vk-bAy" secondAttribute="bottom" id="WPJ-Ll-COU"/>
-                <constraint firstItem="9Kn-vk-bAy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f2l-py-XJH"/>
-                <constraint firstItem="9Kn-vk-bAy" firstAttribute="top" secondItem="xbS-uc-LdA" secondAttribute="bottom" id="gil-CC-gcI"/>
-                <constraint firstItem="xbS-uc-LdA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-3" id="xoA-le-n2V"/>
+                <constraint firstAttribute="bottom" secondItem="9Kn-vk-bAy" secondAttribute="bottom" id="2qA-VX-te1"/>
+                <constraint firstItem="9Kn-vk-bAy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9yy-0J-JMe"/>
+                <constraint firstAttribute="trailing" secondItem="9Kn-vk-bAy" secondAttribute="trailing" id="AzW-NL-XJt"/>
+                <constraint firstItem="9Kn-vk-bAy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mp9-Et-huc"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="59.5"/>
         </view>

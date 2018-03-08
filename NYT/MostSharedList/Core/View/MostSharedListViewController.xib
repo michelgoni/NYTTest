@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MostSharedListViewController" customModule="NYT" customModuleProvider="target">
             <connections>
-                <outlet property="sourceSegmentedController" destination="U2K-vo-yVE" id="duI-yS-mcY"/>
                 <outlet property="tableView" destination="ja5-kv-6ls" id="vDy-W4-iKm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,44 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ja5-kv-6ls">
-                    <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zoe-Ry-Zoi">
-                    <rect key="frame" x="0.0" y="64" width="375" height="29"/>
-                    <segments>
-                        <segment title="1 day"/>
-                        <segment title="7 days"/>
-                        <segment title="30 days"/>
-                    </segments>
-                    <connections>
-                        <action selector="daysSegmentedController:" destination="-1" eventType="valueChanged" id="miE-pX-qgt"/>
-                    </connections>
-                </segmentedControl>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U2K-vo-yVE">
-                    <rect key="frame" x="91" y="92" width="201" height="29"/>
-                    <segments>
-                        <segment title="Twitter"/>
-                        <segment title="Facebook"/>
-                    </segments>
-                    <connections>
-                        <action selector="socialMediaSegmentedController:" destination="-1" eventType="valueChanged" id="Gvb-1t-Veh"/>
-                    </connections>
-                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="zoe-Ry-Zoi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="3Lv-k1-ccL"/>
-                <constraint firstAttribute="trailing" secondItem="ja5-kv-6ls" secondAttribute="trailing" id="HTY-Fg-Mqr"/>
-                <constraint firstItem="U2K-vo-yVE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="91" id="JTc-ue-Uel"/>
-                <constraint firstAttribute="trailing" secondItem="zoe-Ry-Zoi" secondAttribute="trailing" id="KTu-qh-0tS"/>
-                <constraint firstAttribute="trailing" secondItem="U2K-vo-yVE" secondAttribute="trailing" constant="83" id="Lov-uX-aEA"/>
-                <constraint firstItem="ja5-kv-6ls" firstAttribute="top" secondItem="U2K-vo-yVE" secondAttribute="bottom" id="R8L-hM-mYi"/>
-                <constraint firstItem="ja5-kv-6ls" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VZO-6L-fQx"/>
-                <constraint firstItem="ja5-kv-6ls" firstAttribute="top" secondItem="U2K-vo-yVE" secondAttribute="bottom" id="aVm-hY-O17"/>
-                <constraint firstItem="zoe-Ry-Zoi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dVB-oS-tlK"/>
-                <constraint firstItem="U2K-vo-yVE" firstAttribute="top" secondItem="zoe-Ry-Zoi" secondAttribute="bottom" id="ddF-y3-LBZ"/>
-                <constraint firstAttribute="bottom" secondItem="ja5-kv-6ls" secondAttribute="bottom" id="fp9-lO-V6v"/>
+                <constraint firstItem="ja5-kv-6ls" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2hQ-UE-62W"/>
+                <constraint firstItem="ja5-kv-6ls" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bEJ-6a-Qrb"/>
+                <constraint firstAttribute="bottom" secondItem="ja5-kv-6ls" secondAttribute="bottom" id="l59-Qk-M6Y"/>
+                <constraint firstAttribute="trailing" secondItem="ja5-kv-6ls" secondAttribute="trailing" id="rSf-f0-hVV"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
